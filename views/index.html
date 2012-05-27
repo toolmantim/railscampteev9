@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+   THE__________________ _       _______  __
+  / ____/ ____/_  __/   | |     / /   \ \/ /
+ / / __/ __/   / / / /| | | /| / / /| |\  / 
+/ /_/ / /___  / / / ___ | |/ |/ / ___ |/ /  
+\____/_____/ /_/ /_/  |_|__/|__/_/  |_/_/
+
+A website about a t-shirt, lovingly crafted by Tim Lucas (@toolmantim)
+-->
+<html>
+  <head>
+    <title>Railscamp Tee XI: The Getaway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function() {
+        // Skip intros, like it's 1999!
+        var stopAnim = function() { document.getElementsByTagName("body")[0].className = ""; }
+        window.addEventListener("mousedown", stopAnim, false);
+        window.addEventListener("touchstart", stopAnim, false);
+        // Scroll that iOS nav bar away
+        window.addEventListener("load", function() {
+          if (document.body.scrollTop == 0)
+            setTimeout(function(){ window.scrollTo(0, 1); }, 0);
+        }, false);
+      })();
+    </script>
+    <style>
+      /* @license
+        MyFonts Webfont Build ID 2298972, 2012-05-27T07:30:55-0400
+        
+        The fonts listed in this notice are subject to the End User License
+        Agreement(s) entered into by the website owner. All other parties are 
+        explicitly restricted from using the Licensed Webfonts(s).
+        
+        You may obtain a valid license at the URLs below.
+        
+        Webfont: Girga by DSType
+        URL: http://www.myfonts.com/fonts/dstype/girga/regular/
+        Copyright: Copyright &#x00A9; 2012 by Dino dos Santos. All rights reserved.
+        Licensed pageviews: 10,000
+        
+        Webfont: Girga Stencil by DSType
+        URL: http://www.myfonts.com/fonts/dstype/girga/stencil/
+        Copyright: Copyright &#x00A9; 2012 by Dino dos Santos. All rights reserved.
+        Licensed pageviews: 10,000
+        
+        Webfont: Jocham Italic by Hubert Jocham Type
+        URL: http://www.myfonts.com/fonts/hubertjocham/jocham/italic/
+        Copyright: Copyright (c) 2012 by Hubert Jocham. All rights reserved.
+        Licensed pageviews: 10,000
+        
+        License: http://www.myfonts.com/viewlicense?type=web&buildid=2298972
+        
+        © 2012 Bitstream Inc
+      */
+      @font-face { font-family: Girga; font-weight: normal; font-style: normal; src: url('/fonts/23145C_0_0.woff') format('woff'); }
+      @font-face { font-family: Girga; font-weight: normal; font-style: italic; src: url('/fonts/23145C_1_0.woff') format('woff'); }
+      @font-face { font-family: Jocham; font-weight: normal; font-style: italic; src: url('/fonts/23145C_2_0.woff') format('woff'); }
+
+      /*
+        Ostrich Sans from League of Movable Type
+        http://www.theleagueofmoveabletype.com/ostrich-sans
+        http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+      */
+      @font-face { font-family: Ostrich; font-weight: normal; font-style: normal; src: url('/fonts/ostrich-regular.woff') format('woff'); }
+
+      /* Basic reset */
+      * { margin: 0; padding: 0; }
+
+      body { background: #222 url(/images/bg.png); color: #ccc; max-width: 700px; margin: 0 auto; padding-bottom: 75px; text-align: center; }
+
+      a { color: #aaa; text-decoration: none; }
+      a:hover { color: #ccc; }
+      
+      .lineup { position: relative; width: 493px; height: 285px; margin: 100px auto 30px auto; }
+      .lineup > div { width: 100%; height: 100%; }
+      .lineup .spotlight { width: 100%; height: 100%; }
+      .lineup .heart { position: absolute; opacity: 1; width: 6.288%; height: 7.108%; }
+      .lineup .heart:hover { opacity: .4; }
+      .lineup .heart.hockney { left: 10.751%; top: 50.877%; }
+      .lineup .heart.mcmanus { left: 28.195%; top: 36.491%; }
+      .lineup .heart.keaton { left: 47.870%; top: 34.737%; }
+      .lineup .heart.fenster { left: 65.720%; top: 40.351%; }
+      .lineup .heart.kint { left: 81.744%; top: 44.912%; -webkit-transform: rotate(12deg); -moz-transform: rotate(12deg); -ms-transform: rotate(12deg); transform: rotate(12deg); }
+      
+      h1 { font: italic normal 81px/1 Girga; text-transform: uppercase; margin-bottom: 70px; }
+      h1 .the { display: inline-block; border-top: 11px solid #ccc; border-bottom: 12px solid #ccc; font-style: normal; font-size: 38px; line-height: 34px; position: relative; top: -16px; }
+      h1 .the > span { display: inline-block; letter-spacing: 0.05em; }
+      h1 .the .t-1 {  }
+      h1 .the .h-1 {  }
+      h1 .the .e-1 { }
+      h1 .space { font-size: 0; padding-left: 10px; }
+      h1 .getaway .g-1 { letter-spacing: 0.03em; }
+      h1 .getaway .e-1 { letter-spacing: 0.04em; }
+      h1 .getaway .t-1 { letter-spacing: -0.05em; }
+      h1 .getaway .a-1 { letter-spacing: -0.1em; }
+      h1 .getaway .w-1 { letter-spacing: -0.07em; }
+      h1 .getaway .a-2 { letter-spacing: -0.125em; }
+      h1 .getaway .y-1 { }
+      
+      .credits { -webkit-column-count: 3; width: 100%; margin-left: auto; margin-right: auto; }
+      .credits h2 { font: italic normal 24px/1 Jocham; color: #ff1f1f;  margin-bottom: 10px; }
+      .credits h3 { font: normal normal 21px/1 Ostrich; text-transform: uppercase; letter-spacing: 0.1em; }
+      .credits h3 a { color: #777; display: inline-block; } 
+      .credits h3 a b { color: #888; font-weight: normal; }
+      .credits h3 a:hover { color: #bbb; display: inline-block; } 
+      .credits h3 a:hover b { color: #fff; }
+      .credits h3 a b { color: #999; }
+      .credits .illo h3 a b, .credits .site a b { margin-right: -0.15em; }
+      .credits .illo .n-1 { letter-spacing: 0.05em; }
+      .credits .illo .a-1 { letter-spacing: 0.01em; }
+      .credits .site .t-1 { letter-spacing: 0.1em; }
+      .credits .site .i-1 { letter-spacing: 0.15em; }
+      
+      .about { margin-top: 75px; font: normal normal 16px/20px Ostrich; text-transform: uppercase; letter-spacing: 0.15em; }
+      .about { color: #555; }
+      .about { color: #777; }
+      .about:hover a:hover { color: #ccc; }
+      .about span.bars { display: inline-block; border-top: 1px solid rgba(255,255,255,.15); width: 30px; height: 6px; position: relative; }
+      .about span.bars.left { margin-right: 10px; }
+      .about span.bars.right { margin-left: 10px; }
+      .about span.bars.left:after { content: " "; width: 50px; height: 11px; display: block; border-right: 1px solid rgba(255,255,255,.15); position: absolute; top: -6px; right: -1px; }
+      .about span.bars.right:after { content: " "; width: 50px; height: 11px; display: block; border-left: 1px solid rgba(255,255,255,.15); position: absolute; top: -6px; left: -1px; }
+      
+      .credits h2, h1 { -webkit-font-smoothing: antialiased; }
+      
+      a, a b { -webkit-transition: color 100ms; }
+      .lineup .heart { -webkit-transition: opacity 500ms linear; }
+      
+      @media screen and (max-width: 600px) {
+        .lineup { width: 300px; height: 174px; margin: 70px auto 20px auto; }
+        h1 { font-size: 54px; margin-bottom: 70px; }
+        h1 span.the { font-size: 20px; line-height: 21px; border-width: 7px; top: -12px; }
+        h1 span.space { padding-left: 5px; }
+        .credits { -webkit-column-count: 1; }
+        .credits h2 { font-size: 21px; }
+        .credits h3 { font-size: 24px; margin-bottom: 30px; }
+        .about { font-size: 18px; margin-top: 60px; }
+      }
+
+      @media screen and (max-width: 400px) {
+        .lineup { width: 200px; height: 116px; margin: 60px auto 20px auto; }
+        h1 { font-size: 36px; margin-bottom: 60px; }
+        h1 span.the { font-size: 14px; line-height: 14px; border-width: 5px; top: -7px; }
+        h1 span.space { padding-left: 5px; }
+        .credits { -webkit-column-count: 1; }
+        .credits h2 { font-size: 16px; }
+        .credits h3 { font-size: 18px; margin-bottom: 30px; }
+        .about { font-size: 12px; margin-top: 60px; }
+        .about span.bars { display: none; }
+      }
+      
+      /* Anim */
+      body.anim { -webkit-filter: blur(25px); -webkit-animation: blur-in 14.25s linear forwards; }
+      body.anim h1 .the { opacity: 0; -webkit-animation: fade-in 1s 18.75s linear forwards; }
+      body.anim h1 .getaway { opacity: 0; -webkit-animation: fade-in 1s 19.75s linear forwards; }
+      body.anim .credits, body.anim .about { opacity: 0; -webkit-animation: fade-in 500ms 22.5s linear forwards; }
+      body.anim .spotlight { opacity: 0; -webkit-animation: spotlight 2.5s 15s linear forwards; }
+      body.anim .markings, body.anim .robots { opacity: 0; -webkit-animation: fade-in 10ms 15s linear forwards; }
+      body.anim .lineup .heart { -webkit-animation: pulse 1.5s 10 linear alternate; }
+      
+      @-webkit-keyframes fade-out {
+        from { opacity: 0; }
+        to { opacity: 0; }
+      }
+      @-webkit-keyframes fade-in {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @-webkit-keyframes pulse {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+      @-webkit-keyframes spotlight {
+        0% { opacity: 0; }
+        2% { opacity: .4; }
+        4% { opacity: 0; }
+        10% { opacity: .6; }
+        16% { opacity: 0; }
+        20% { opacity: .3; }
+        24% { opacity: 0; }
+        99% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @-webkit-keyframes blur-in {
+        0% { -webkit-filter: blur(25px); }
+        100% { -webkit-filter: blur(0); }
+      }
+      @-webkit-keyframes bg-color {
+        0% { background-color: #222; }
+        100% { background-color: #000; }
+      }
+    </style>
+  </head>
+  <body class="anim">
+    <div class="lineup">
+      <div>
+        <img src="/images/spotlight.svg" class="spotlight" />
+        <div class="hearts">
+          <img src="/images/heart.svg" class="heart hockney" />
+          <img src="/images/heart.svg" class="heart mcmanus" />
+          <img src="/images/heart.svg" class="heart keaton" />
+          <img src="/images/heart.svg" class="heart fenster" />
+          <img src="/images/heart.svg" class="heart kint" />
+        </div>
+      </div>
+    </div>
+    <h1><span class="the"><span><span class="t-1">T</span><span class="h-1">h</span><span class="e-1">e</span></span></span><span class="space"> </span><span class="getaway"><span class="g-1">G</span><span class="e-1">e</span><span class="t-1">t</span><span class="a-1">a</span><span class="w-1">w</span><span class="a-2">a</span><span class="y-1">y</span></span></h1>
+    <section class="credits">
+      <hgroup class="illo">
+        <h2>Illustration</h2>
+        <h3><a href="http://nathanhoad.net/"><b><span class="n-1">N</span><span class="a-1">a</span>than</b> Hoad</a></h3>
+      </hgroup>
+      <hgroup class="sponsor">
+        <h2>Generous Sponsor</h2>
+        <h3><a href="http://thoughtworks.com/"><b>Thought</b>Works</a></h3>
+      </hgroup>
+      <hgroup class="site">
+        <h2>This Wee Site</h2>
+        <h3><a href="http://toolmantim.com/"><b><span class="t-1">T</span><span class="i-1">i</span>m</b> Lucas</a></h3>
+      </hgroup>
+    </section>
+    <footer class="about">
+      <span class="bars left">&nbsp;</span> The official tee for <a href="">Railscamp XI</a> <span class="bars right">&nbsp;</span>
+    </footer>
+  </body>
+</html>
