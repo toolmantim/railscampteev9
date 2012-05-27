@@ -15,7 +15,7 @@ A website about a t-shirt, lovingly crafted by Tim Lucas (@toolmantim)
     <script>
       (function() {
         // Skip intros, like it's 1999!
-        var stopAnim = function() { document.getElementsByTagName("body")[0].className = ""; }
+        var stopAnim = function() { document.getElementsByTagName("body")[0].className = "skip-anim"; }
         window.addEventListener("mousedown", stopAnim, false); window.addEventListener("touchstart", stopAnim, false);
         // Scroll that iOS nav bar away
         window.addEventListener("load", function() {
