@@ -85,7 +85,7 @@ a, a b { -webkit-transition-property: color; -moz-transition-property: color; -m
   .credits h3 { font-size: 18px; margin-bottom: 30px; }
   .about { font-size: 12px; margin-top: 60px; }
   .about span.bars { display: none; } }
-body.anim { -webkit-filter: blur(25px); -webkit-animation: blur-in 14.25s linear forwards; -moz-animation: blur-in 14.25s linear forwards; -ms-animation: blur-in 14.25s linear forwards; -o-animation: blur-in 14.25s linear forwards; animation: blur-in 14.25s linear forwards; }
+body.anim { -webkit-filter: blur(25px); -moz-filter: blur(25px); -ms-filter: blur(25px); -o-filter: blur(25px); filter: blur(25px); -webkit-animation: blur-in 14.25s linear forwards; -moz-animation: blur-in 14.25s linear forwards; -ms-animation: blur-in 14.25s linear forwards; -o-animation: blur-in 14.25s linear forwards; animation: blur-in 14.25s linear forwards; }
 body.anim h1 .the { opacity: 0; -webkit-animation: fade-in 1s 18.75s linear forwards; -moz-animation: fade-in 1s 18.75s linear forwards; -ms-animation: fade-in 1s 18.75s linear forwards; -o-animation: fade-in 1s 18.75s linear forwards; animation: fade-in 1s 18.75s linear forwards; }
 body.anim h1 .getaway { opacity: 0; -webkit-animation: fade-in 1s 19.75s linear forwards; -moz-animation: fade-in 1s 19.75s linear forwards; -ms-animation: fade-in 1s 19.75s linear forwards; -o-animation: fade-in 1s 19.75s linear forwards; animation: fade-in 1s 19.75s linear forwards; }
 body.anim .credits, body.anim .about { opacity: 0; -webkit-animation: fade-in 500ms 22.5s linear forwards; -moz-animation: fade-in 500ms 22.5s linear forwards; -ms-animation: fade-in 500ms 22.5s linear forwards; -o-animation: fade-in 500ms 22.5s linear forwards; animation: fade-in 500ms 22.5s linear forwards; }
@@ -173,17 +173,17 @@ body.anim .lineup .heart { -webkit-animation: fade-out 1.5s 10 linear alternate;
   99% { opacity: 0; }
   100% { opacity: 1; } }
 
-@-moz-keyframes blur-in { from { -webkit-filter: blur(25px); }
-  to { -webkit-filter: blur(0); } }
+@-moz-keyframes blur-in { from { -moz-filter: blur(25px); filter: blur(25px); }
+  to { -moz-filter: blur(0); filter: blur(0); } }
 
-@-webkit-keyframes blur-in { from { -webkit-filter: blur(25px); }
-  to { -webkit-filter: blur(0); } }
+@-webkit-keyframes blur-in { from { -webkit-filter: blur(25px); filter: blur(25px); }
+  to { -webkit-filter: blur(0); filter: blur(0); } }
 
-@-o-keyframes blur-in { from { -webkit-filter: blur(25px); }
-  to { -webkit-filter: blur(0); } }
+@-o-keyframes blur-in { from { -o-filter: blur(25px); filter: blur(25px); }
+  to { -o-filter: blur(0); filter: blur(0); } }
 
-@-ms-keyframes blur-in { from { -webkit-filter: blur(25px); }
-  to { -webkit-filter: blur(0); } }
+@-ms-keyframes blur-in { from { -ms-filter: blur(25px); filter: blur(25px); }
+  to { -ms-filter: blur(0); filter: blur(0); } }
 
-@keyframes blur-in { from { -webkit-filter: blur(25px); }
-  to { -webkit-filter: blur(0); } }
+@keyframes blur-in { from { filter: blur(25px); }
+  to { filter: blur(0); } }

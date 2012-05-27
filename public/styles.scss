@@ -1,6 +1,10 @@
 @import "compass";
 @import "animation";
 
+@mixin filter($filter) {
+  @include experimental(filter, $filter, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
 /* @license
   MyFonts Webfont Build ID 2298972, 2012-05-27T07:30:55-0400
         
@@ -170,7 +174,7 @@ a, a b {
 }
 
 body.anim {
-  -webkit-filter: blur(25px);
+  @include filter(blur(25px));
   @include animation(blur-in 14.25s linear forwards);
   h1 {
     .the { opacity: 0; @include animation(fade-in 1s 18.75s linear forwards); }
@@ -205,6 +209,6 @@ body.anim {
 }
 
 @include keyframes(blur-in) {
-  from { -webkit-filter: blur(25px); }
-  to { -webkit-filter: blur(0); }
+  from { @include filter(blur(25px)); }
+  to { @include filter(blur(0)); }
 }
