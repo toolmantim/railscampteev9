@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+   THE__________________ _       _______  __
+  / ____/ ____/_  __/   | |     / /   \ \/ /
+ / / __/ __/   / / / /| | | /| / / /| |\  / 
+/ /_/ / /___  / / / ___ | |/ |/ / ___ |/ /  
+\____/_____/ /_/ /_/  |_|__/|__/_/  |_/_/
+
+A website about a t-shirt, lovingly crafted by Tim Lucas (@toolmantim)
+-->
+<html>
+  <head>
+    <title>Railscamp Tee XI: The Getaway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function() {
+        // Skip intros, like it's 1999!
+        var stopAnim = function() { document.getElementsByTagName("body")[0].className = ""; }
+        window.addEventListener("mousedown", stopAnim, false); window.addEventListener("touchstart", stopAnim, false);
+        // Scroll that iOS nav bar away
+        window.addEventListener("load", function() {
+          if (document.body.scrollTop == 0)
+            setTimeout(function(){ window.scrollTo(0, 1); }, 0);
+        }, false);
+      })();
+    </script>
+    <style>
+      <%= @styles %>
+    </style>
+  </head>
+  <body class="anim">
+    <div class="lineup">
+      <div>
+        <img src="/images/spotlight.svg" class="spotlight" />
+        <div class="hearts">
+          <img src="/images/heart.svg" class="heart hockney" />
+          <img src="/images/heart.svg" class="heart mcmanus" />
+          <img src="/images/heart.svg" class="heart keaton" />
+          <img src="/images/heart.svg" class="heart fenster" />
+          <img src="/images/heart.svg" class="heart kint" />
+        </div>
+      </div>
+    </div>
+    <h1><span class="the"><span><span class="t-1">T</span><span class="h-1">h</span><span class="e-1">e</span></span></span><span class="space"> </span><span class="getaway"><span class="g-1">G</span><span class="e-1">e</span><span class="t-1">t</span><span class="a-1">a</span><span class="w-1">w</span><span class="a-2">a</span><span class="y-1">y</span></span></h1>
+    <section class="credits">
+      <hgroup class="illo">
+        <h2>Illustration</h2>
+        <h3><a href="http://nathanhoad.net/"><b><span class="n-1">N</span><span class="a-1">a</span>than</b> Hoad</a></h3>
+      </hgroup>
+      <hgroup class="sponsor">
+        <h2>Generous Sponsor</h2>
+        <h3><a href="http://thoughtworks.com/"><b>Thought</b>Works</a></h3>
+      </hgroup>
+      <hgroup class="site">
+        <h2>This Wee Site</h2>
+        <h3><a href="http://toolmantim.com/"><b><span class="t-1">T</span><span class="i-1">i</span>m</b> Lucas</a></h3>
+      </hgroup>
+    </section>
+    <footer class="about">
+      <span class="bars left">&nbsp;</span> The official tee for <a href="">Railscamp XI</a> <span class="bars right">&nbsp;</span>
+    </footer>
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script'); t.type  = 'text/javascript'; t.async = true; t.id    = 'gauges-tracker'; t.setAttribute('data-site-id', '4fc2970ff5a1f52d25000029'); t.src = '//secure.gaug.es/track.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>

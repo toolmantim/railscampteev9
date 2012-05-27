@@ -1,8 +1,12 @@
 require 'sinatra'
 
+require 'rack/deflater'
+use Rack::Deflater
+
 # For Foreman
 configure(:development) { STDOUT.sync = true }
 
 get '/' do
-  send_file "views/index.html"
+  @styles = File.read("public/styles.css")
+  erb :"index.html", layout:false
 end
