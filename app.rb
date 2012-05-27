@@ -1,8 +1,5 @@
 require 'sinatra'
 
-require 'rack/deflater'
-use Rack::Deflater
-
 # For Foreman
 configure(:development) { STDOUT.sync = true }
 
