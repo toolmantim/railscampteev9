@@ -1,6 +1,10 @@
 @import "compass";
 @import "animation";
 
+// A CSS3 filter mixin, to be used it like so:
+//
+//   @include filter(blur(25px));
+//
 @mixin filter($filter) {
   @include experimental(filter, $filter, -moz, -webkit, -o, -ms, not -khtml, official);
 }
