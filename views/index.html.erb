@@ -11,6 +11,7 @@ A website about a t-shirt, lovingly crafted by Tim Lucas (@toolmantim)
 <html>
   <head>
     <title>Railscamp Tee XI: The Getaway</title>
+    <link rel="stylesheet" href="<%= asset_path 'styles.css' %>" media="screen" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
       (function() {
@@ -24,18 +25,17 @@ A website about a t-shirt, lovingly crafted by Tim Lucas (@toolmantim)
         }, false);
       })();
     </script>
-    <link rel="stylesheet" href="styles.css" media="screen" type="text/css" />
   </head>
   <body class="anim">
     <div class="lineup">
       <div>
-        <img src="/images/spotlight.svg" class="spotlight" />
+        <img src="<%= asset_path 'images/spotlight.svg' %>" class="spotlight" />
         <div class="hearts">
-          <img src="/images/heart.svg" class="heart hockney" />
-          <img src="/images/heart.svg" class="heart mcmanus" />
-          <img src="/images/heart.svg" class="heart keaton" />
-          <img src="/images/heart.svg" class="heart fenster" />
-          <img src="/images/heart.svg" class="heart kint" />
+          <img src="<%= asset_path 'images/heart.svg' %>" class="heart hockney" />
+          <img src="<%= asset_path 'images/heart.svg' %>" class="heart mcmanus" />
+          <img src="<%= asset_path 'images/heart.svg' %>" class="heart keaton" />
+          <img src="<%= asset_path 'images/heart.svg' %>" class="heart fenster" />
+          <img src="<%= asset_path 'images/heart.svg' %>" class="heart kint" />
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@ A website about a t-shirt, lovingly crafted by Tim Lucas (@toolmantim)
       </hgroup>
       <hgroup class="site">
         <h2>This Wee Site</h2>
-        <h3><a href="http://toolmantim.com/"><b><span class="t-1">T</span><span class="i-1">i</span>m</b> Lucas</a></h3>
+        <h3><a href="http://toolmantim.com/" rel="author"><b><span class="t-1">T</span><span class="i-1">i</span>m</b> Lucas</a></h3>
       </hgroup>
     </section>
     <footer class="about">
