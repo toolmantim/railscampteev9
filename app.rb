@@ -1,20 +1,4 @@
 require 'sinatra'
-
-# For Foreman
-configure(:development) { STDOUT.sync = true }
-
-
-# Rack/Cache
-
-require 'rack/cache'
-require 'dalli'
-
-use Rack::Cache,
-  metastore: Dalli::Client.new,
-  entitystore: 'file:tmp/cache/rack/body',
-  allow_reload: false,
-  default_ttl: 60
-
 require 'digest/md5'
 
 set :static_cache_control, [:public]
