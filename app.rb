@@ -16,6 +16,8 @@ use Rack::Cache,
 
 require 'digest/md5'
 
+# Cache unversioned assets for 5 minutes
+set :static_cache_control, [:public, max_age: 300]
 
 # Pre-calculate all the asset SHA's
 set :assets, Dir["*.css", "**/*.{png,svg,css}"].inject({}) {|acc, file|
