@@ -4,7 +4,7 @@ A website about a t-shirt, lovingly crafted by Tim Lucas (@toolmantim) for [Rail
 
 ## Notes
 
-* As far as typefaces go, the two chunky display typefaces are the lovely new typefaces [Girga](http://www.myfonts.com/fonts/dstype/girga/) and [Jocham](http://www.myfonts.com/fonts/hubertjocham/jocham/), and the third is the open-source [Ostrich Sans](http://www.theleagueofmoveabletype.com/ostrich-sans).
+* As far as typefaces go, the two chunky display typefaces are the lovely new [Girga](http://www.myfonts.com/fonts/dstype/girga/) and [Jocham](http://www.myfonts.com/fonts/hubertjocham/jocham/), and the third is the open-source [Ostrich Sans](http://www.theleagueofmoveabletype.com/ostrich-sans).
 * [Compass](http://compass-style.org/) command line tool is used for compiling the CSS, mainly for the CSS vendor prefixing (incuding the animations) and the data-uri embedding. See the Rakefile for the command.
 * The SCSS file is in the public folder. Sharing is caring.
 * A few lines of Sinatra helpers gives us asset timestamping and long-expires.
