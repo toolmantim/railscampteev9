@@ -22,6 +22,22 @@ v9 is the final edition in a long series of railscamp tee projects:
 * [v2](http://www.redbubble.com/people/railscamp/works/1191613-rails-camp-tee-v2-1) - redbubble
 * [v1(ish)](http://www.redbubble.com/people/railscamp/works/1135507-rails-camp-tee-white-edition) - redbubble
 
+## Development
+
+Firstly, you'll need [Ruby 1.9](http://www.ruby-lang.org/en/downloads/) and [bundler](http://gembundler.com/). Once you've got those:
+
+    git clone https://toolmantim@github.com/toolmantim/railscampteev9.git
+    cd railscampteev9
+    bundle
+
+To run the local server:
+
+    foreman start
+    
+To compile the CSS:
+
+    rake
+
 ## License
 
 Everything in the entire site is MIT licensed, do what you like with it,
