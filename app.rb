@@ -12,12 +12,12 @@ require 'dalli'
 use Rack::Cache,
   metastore: Dalli::Client.new,
   entitystore: 'file:tmp/cache/rack/body',
-  allow_reload: false
+  allow_reload: false,
+  default_ttl: 60
 
 require 'digest/md5'
 
-# Cache unversioned assets for 5 minutes
-set :static_cache_control, [:public, max_age: 300]
+set :static_cache_control, [:public]
 
 # Pre-calculate all the asset SHA's
 set :assets, Dir["*.css", "**/*.{png,svg,css}"].inject({}) {|acc, file|
@@ -33,9 +33,9 @@ helpers do
 end
 
 get '/' do
-  cache_control :public
   erb(:"index.html", layout:false).tap do |html|
     etag Digest::MD5.hexdigest(html)
+    cache_control :public
   end
 end
 
@@ -43,9 +43,9 @@ end
 settings.assets.each_pair do |path, sha|
   p = Pathname.new(path)
   get Regexp.new('/' + Regexp.escape(p.to_s).sub(/(\\\..*?)$/, '\\\.' + sha + '\1').sub('public/','')) do
+    etag sha
     expires 60*60*24*365, :public
     content_type Rack::Mime.mime_type(File.extname(path))
-    etag sha
     send_file path
   end
 end
