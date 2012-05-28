@@ -31,6 +31,7 @@ helpers do
 end
 
 get '/' do
+  cache_control :public, :must_revalidate
   erb(:"index.html", layout:false).tap do |html|
     etag Digest::MD5.hexdigest(html)
   end
